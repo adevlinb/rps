@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
     <title>Rock Paper Scissors!</title>
 </head>
 <body>
-    
+    <div id="MAIN">
+        <h1>Rock • Paper • Scissors</h1>
+        <span><h4>Best of 10 games, wins!</h4></span>
+        <div id=flexBox>
+            <div id="firstCol">  
+                <p id="player">PLAYER:</p>
+                <p class="scores" id="playScore">0</p>
+                <img id="playerPic" class="images" src="static/questionIcon.png" alt="ROCK">
+                <button class="choice" id="rock">R</button>
+            </div>
+            <div id="secondCol">
+                <p id="tie">TIE:</p>
+                <p class="scores" id="tieScore">0</p>
+                <img id="countClock" class="images" src="static/compWins.png" alt="PAPER">
+                <button class="choice" id="paper">P</button> 
+            </div>
+            <div id="thirdCol">
+                <p id="computer">COMPUTER:</p>
+                <p class="scores" id="compScore">0</p>
+                <img id="compPic" class="images" src="static/questionIcon.png" alt="SCISSORS">
+                <button class="choice" id="scissors">S</button>
+            </div>
+        </div>
+        <button id="playAgain">PLAY AGAIN?</button>
+        <button id="resetScore">RESET SCORE</button>
+        <audio id="win" src="audio/win.wav"></audio>
+        <audio id="lose" src="audio/lose.wav"></audio>
 </body>
 </html>

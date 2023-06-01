@@ -1,0 +1,85 @@
+
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: url("images/background3.jpeg");
+   
+}
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+h4 {
+    display: inline;
+    margin: 2px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+p {
+    margin-bottom: 3px;
+    font-size: 20px;
+    text-shadow: 3px black;
+    color: white;
+    background-color: black;
+}
+
+#flexBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#firstCol {
+    display: flex;
+    flex-direction: column;
+}
+
+#secondCol {
+    display: flex;
+    flex-direction: column;
+}
+
+#thirdCol {
+    display: flex;
+    flex-direction: column;
+}
+
+#playerPic, #countClock, #compPic {
+    margin: 40px;
+    height: 90px;
+}
+
+.choice {
+    font-size: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 12px;
+    border-style: solid black;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: rgb(16, 38, 51) 2, 2, 2;
+    transition: ease-in-out 0.5s;
+}
+
+.choice:hover {
+    background-color: rgb(88, 95, 110);
+}
+
+.scores {
+    margin-top: 0.5px;
+}
+
+#playAgain, #resetScore {
+    color: red;
+}
