@@ -47,25 +47,15 @@ const audioWin = document.getElementById("win");
 const audioLose = document.getElementById("lose");
 
 /*----- event listeners -----*/
-rock_input.addEventListener("click", function() {
-    game(0);
-});
+rock_input.addEventListener("click", () => game(0));
 
-paper_input.addEventListener("click", function() {
-    game(1);
-});
+paper_input.addEventListener("click", () => game(1));
 
-scissor_input.addEventListener("click", function() {
-    game(2);
-});
+scissor_input.addEventListener("click", () => game(2));
 
-resetScores.addEventListener("click", function(){
-    resetScore();
-});
+resetScores.addEventListener("click", resetScore);
 
-playAgain.addEventListener("click", function(){
-    init();
-});
+playAgain.addEventListener("click", init);
 
 /*----- functions -----*/
 init();
@@ -118,6 +108,7 @@ function LOSE() {
     javaCompScore += 1;
     audioLose.play();
     countClock.src = PHOTO.compWin;
+    playerPic.style.outline = "none";
     compPic.style.outline = "dashed 5px rgb(255, 76, 22)";
     compPic.style.outlineOffset = "10px";
     renderBoard();
@@ -126,6 +117,8 @@ function LOSE() {
 function TIE() {
     tie += 1;
     countClock.src = PHOTO.tie
+    playerPic.style.outline = "none";
+    compPic.style.outline = "none";
     countClock.style.outline = "dashed 5px rgb(255, 76, 22)";
     countClock.style.outlineOffset = "10px";
     renderBoard();
@@ -150,7 +143,7 @@ function game(num) {
 
 function winLogic() {
 
-    if (playChoice === compChoice) TIE();
+    if (playChoice === compChoice) return TIE();
 
     if (playChoice === "rock") {
         if (compChoice === "scissors") WIN();
